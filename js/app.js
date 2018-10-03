@@ -53,7 +53,7 @@ function eListener() {
         } else {
             lista = JSON.parse(localS);
         }
-        let elemente = ""
+        let elemente = "";
         lista.forEach(item => {
             elemente += creareProdus(item.titlu, item.sursaPoza, item.pret);
 
@@ -64,6 +64,7 @@ function eListener() {
 
 //functions
 function adaugaInCos(e) {
+    e.preventDefault();
     let dinLista = e.target.parentNode;
     let titlu = dinLista.children[0].textContent;
     let sursaPoza = dinLista.parentNode.children[0].getAttribute("src");
